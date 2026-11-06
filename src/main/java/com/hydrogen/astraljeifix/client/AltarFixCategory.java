@@ -52,7 +52,7 @@ public class AltarFixCategory implements IRecipeCategory<AltarRecipe> {
     private static final ResourceLocation BLANK =
             ResourceLocation.fromNamespaceAndPath(AstralJeiFix.MODID, TEX + "blank.png");
 
-    // 左栏：方阵中心与三个等级的贴图/格位（格位是相对贴图左上角的坐标）
+    // 左栏：方阵中心与各等级的贴图/格位（格位是相对贴图左上角的坐标）
     private static final int PLATE_CENTER_X = 76;
     private static final int PLATE_CENTER_Y = 88;
     private static final int GRID_PITCH = 18;
@@ -202,7 +202,7 @@ public class AltarFixCategory implements IRecipeCategory<AltarRecipe> {
                     .addItemStacks(stacksOf(bridge));
         }
 
-        // 中继：5×5 行主序，内圈 8 个、外圈 16 个；只有 3×3 格位的等级把内圈减一格看
+        // 聚星转继台：5×5 行主序，内圈 8 个、外圈 16 个；只有 3×3 格位的等级把内圈减一格看
         List<IngredientBridge> relays = grid.getRelayInputs();
         int lattice = plate.relayX().length;
         for (int index = 0; index < 25 && index < relays.size(); index++) {
