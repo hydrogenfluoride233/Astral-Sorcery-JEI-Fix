@@ -1,47 +1,17 @@
-# Astral Sorcery JEI Fix / 星辉魔法 JEI 修复
+# Astral Sorcery JEI Fix
 
-给**星辉魔法**（Astral Sorcery）的 JEI「祭坛合成」页换一套更紧凑的版式。
+<div align="right">
 
-原版页面背景写死 148×220，叠上 JEI 的标题行后约 250 逻辑像素高；1920×1080 在 GUI scale 4 下只有 270 像素可用，页面几乎贴满上下边缘，额外输入与流体的第二行容易被挤到看不见。这个附属不改星辉任何类：注册自己的分类，再把原页面隐藏。
+**中文** · [English](README_EN.md)
 
-| 项目 | 值 |
-|---|---|
-| 模组 ID | `as_jei_fix` |
-| 版本 | 1.0.3 |
-| 依赖 | Minecraft 1.21.1、NeoForge 21.1.x、Astral Sorcery 2.0.3+、JEI 19.x |
-| 环境 | 客户端（页面在客户端渲染） |
-| 许可证 | MIT |
+</div>
 
-## 做了什么
+[![版本](https://img.shields.io/badge/版本-0.2.6-blue.svg)](https://www.curseforge.com/minecraft/modpacks/essence-odyssey)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A.svg)](https://www.curseforge.com/minecraft/modpacks/essence-odyssey)
+[![NeoForge](https://img.shields.io/badge/NeoForge-21.1-EA6E1E.svg)](https://www.curseforge.com/minecraft/modpacks/essence-odyssey)
+[![下载](https://img.shields.io/badge/CurseForge-下载-F16436.svg?logo=curseforge&logoColor=white)](https://www.curseforge.com/minecraft/modpacks/essence-odyssey)
+[![许可](https://img.shields.io/badge/许可-CC_BY--NC--SA_4.0-lightgrey.svg)](LICENSE)
 
-| 区域 | 内容 |
-|---|---|
-| 左栏 | 按祭坛等级换用不同的方阵底图（启明 / 共振 / 共振扩展 / 辉光 / 虹彩），用宝典自己的格位坐标摆 3×3 工作格与内外两圈聚星转继台，上方写祭坛名字与图标 |
-| 右栏上 | 流明条（沿用星辉注册的 JEI 流明配料与渲染器）、产物坐在宝典八角星中心 |
-| 右栏下 | 额外输入、所需流体（显示数量与流体容量） |
-| 提示 | ℹ️ 用星辉自己的文案键：仅可在夜间合成、需要哪个星座的定焦物、定焦物碎裂概率、需要来自哪些星座的聚焦星能；只在配方真有额外条件时出现 |
-| 产物 | 用「展示用输出」，把星辉挂在产物上的词条说明（增加魔咒词条 / 将魔咒等级提升至少1级 / 增加1个星能力词条）一起带出来 |
+本模组优化了**星辉魔法（Astral Sorcery）** 的 JEI「祭坛合成」页，为其重写了一套更紧凑的版式，使其在 GUI scale 4 下依然能完整显示。
 
-## 构建
-
-```bash
-./gradlew build
-```
-
-依赖不随仓库分发，编译前把两个 jar 放进 `libs/`：
-
-- `astralsorcery-<版本>.jar`
-- `jei-1.21.1-neoforge-<版本>.jar`
-
-产物在 `build/libs/`。
-
-## 已知边界
-
-- 方阵与格位沿用宝典祭坛页自己的坐标，和宝典里的排布一致（物品会压住十字标记，旁边露出的十字属于空着的格位）。
-- 只替换「祭坛合成」页，星辉其它 JEI 分类不受影响。
-- 原页面在 `onRuntimeAvailable` 里用 `hideRecipeCategory` 隐藏，没有 mixin。
-
-## 相关
-
-- 上游问题：HellFirePvP/AstralSorcery#2048
-- 英文说明：[README_EN.md](README_EN.md)
+<img width="1920" height="1080" alt="屏幕截图(819)" src="https://github.com/user-attachments/assets/fc47692f-0fb3-4846-96b4-dd330c3d626d" />
