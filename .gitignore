@@ -1,0 +1,40 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+runs
+run-data
+
+repo
+libs/
+
+# build outputs
+build/
+.gradle/
+run/
+run-data/
+.idea/
+*.iml
+
+*.log
+
+# 只用于生成 logo 的临时素材
+.logo/ice_ball.png
