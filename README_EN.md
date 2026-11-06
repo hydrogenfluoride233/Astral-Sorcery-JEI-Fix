@@ -1,47 +1,17 @@
 # Astral Sorcery JEI Fix
 
-A client-side JEI addon that replaces the Astral Sorcery altar crafting page with a more compact layout.
+<div align="right">
 
-The stock page is a fixed 148×220 background. With JEI's title bar the recipe needs about 250 logical pixels, and a 1920×1080 screen at GUI scale 4 only has 270, so the page is wedged and the second row — extra inputs and fluids — gets clipped. This addon touches no Astral Sorcery class: it registers its own JEI category and hides the stock page.
+[中文](README.md) · **English**
 
-| Field | Value |
-|---|---|
-| Mod id | `as_jei_fix` |
-| Version | 1.0.3 |
-| Requires | Minecraft 1.21.1, NeoForge 21.1.x, Astral Sorcery 2.0.3+, JEI 19.x |
-| Side | Client |
-| License | MIT |
+</div>
 
-## What it draws
+[![Version](https://img.shields.io/badge/version-1.0.3-blue.svg)](https://github.com/hydrogenfluoride233/Astral-Sorcery-JEI-Fix/releases)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A.svg)](https://github.com/hydrogenfluoride233/Astral-Sorcery-JEI-Fix)
+[![NeoForge](https://img.shields.io/badge/NeoForge-21.1-EA6E1E.svg)](https://github.com/hydrogenfluoride233/Astral-Sorcery-JEI-Fix)
+[![Download](https://img.shields.io/badge/download-Releases-181717.svg?logo=github)](https://github.com/hydrogenfluoride233/Astral-Sorcery-JEI-Fix/releases)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
 
-| Area | Content |
-|---|---|
-| Left | One altar diagram per tier (illuminated / resonating / resonating expanded / luminous / iridescent), laid out with the tome's own slot coordinates: the 3×3 crafting grid plus the inner and outer rings of focus relays. The altar's icon and name sit above it |
-| Right, top | Lumen bars using Astral's own JEI lumen ingredient and renderer; the outputs sit on the tome's eight-pointed star |
-| Right, bottom | Additional inputs and required fluids, with counts and capacity |
-| Tooltips | The ℹ️ icon reuses Astral's own keys: night only, focus constellation, focus shatter chance, focused starlight sources. It only appears when the recipe actually has one of those |
-| Outputs | The "display output" path is used, so the lines Astral adds to the result — one extra enchantment line, +1 enchantment level, one extra gem affix — come along with the item tooltip |
+This mod reworks the JEI "Altar Crafting" page of **Astral Sorcery** into a more compact layout, so the whole recipe stays visible at GUI scale 4.
 
-## Building
-
-```bash
-./gradlew build
-```
-
-The dependencies are not distributed here; drop both jars into `libs/` first:
-
-- `astralsorcery-<version>.jar`
-- `jei-1.21.1-neoforge-<version>.jar`
-
-The jar ends up in `build/libs/`.
-
-## Notes
-
-- Diagrams and slot coordinates are taken from the tome's own altar page (`RenderPageAltar`), so items cover their cross markers exactly as in the book; the crosses you can still see belong to empty slots.
-- Only the "Altar Crafting" category is replaced; other Astral Sorcery JEI categories are untouched.
-- The stock page is hidden with `hideRecipeCategory` in `onRuntimeAvailable`. No mixins, no access transformers.
-
-## Links
-
-- Upstream issue: HellFirePvP/AstralSorcery#2048
-- 中文说明：[README.md](README.md)
+<img width="1920" height="1080" alt="screenshot" src="https://github.com/user-attachments/assets/fc47692f-0fb3-4846-96b4-dd330c3d626d" />
