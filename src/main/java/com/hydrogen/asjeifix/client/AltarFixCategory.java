@@ -1,6 +1,6 @@
-package com.hydrogen.astraljeifix.client;
+package com.hydrogen.asjeifix.client;
 
-import com.hydrogen.astraljeifix.AstralJeiFix;
+import com.hydrogen.asjeifix.AsJeiFix;
 import hellfirepvp.astralsorcery.client.ClientProxy;
 import hellfirepvp.astralsorcery.common.constellation.BaseConstellation;
 import hellfirepvp.astralsorcery.common.ingredient.IngredientBridge;
@@ -46,11 +46,11 @@ public class AltarFixCategory implements IRecipeCategory<AltarRecipe> {
 
     private static final String TEX = "textures/gui/";
     private static final ResourceLocation INFO =
-            ResourceLocation.fromNamespaceAndPath(AstralJeiFix.MODID, TEX + "info.png");
+            ResourceLocation.fromNamespaceAndPath(AsJeiFix.MODID, TEX + "info.png");
     private static final ResourceLocation STAR =
-            ResourceLocation.fromNamespaceAndPath(AstralJeiFix.MODID, TEX + "star.png");
+            ResourceLocation.fromNamespaceAndPath(AsJeiFix.MODID, TEX + "star.png");
     private static final ResourceLocation BLANK =
-            ResourceLocation.fromNamespaceAndPath(AstralJeiFix.MODID, TEX + "blank.png");
+            ResourceLocation.fromNamespaceAndPath(AsJeiFix.MODID, TEX + "blank.png");
 
     // 左栏：方阵中心与各等级的贴图/格位（格位是相对贴图左上角的坐标）
     private static final int PLATE_CENTER_X = 76;
@@ -119,7 +119,7 @@ public class AltarFixCategory implements IRecipeCategory<AltarRecipe> {
     }
 
     private static ResourceLocation loc(String file) {
-        return ResourceLocation.fromNamespaceAndPath(AstralJeiFix.MODID, TEX + file + ".png");
+        return ResourceLocation.fromNamespaceAndPath(AsJeiFix.MODID, TEX + file + ".png");
     }
 
     private static Item altarItem(String id) {
@@ -160,7 +160,7 @@ public class AltarFixCategory implements IRecipeCategory<AltarRecipe> {
 
     @Override
     public Component getTitle() {
-        return Component.translatable("jei.astral_jei_fix.altar");
+        return Component.translatable("jei.as_jei_fix.altar");
     }
 
     @Override
@@ -328,11 +328,11 @@ public class AltarFixCategory implements IRecipeCategory<AltarRecipe> {
         }
 
         if (!recipe.getRequiredAdditionalInputs().isEmpty()) {
-            graphics.drawString(font, Component.translatable("jei.astral_jei_fix.additional"),
+            graphics.drawString(font, Component.translatable("jei.as_jei_fix.additional"),
                     COLUMN_X, ADDITIONAL_LABEL_Y, LABEL, false);
         }
         if (!recipe.getRequiredFluid().isEmpty()) {
-            graphics.drawString(font, Component.translatable("jei.astral_jei_fix.fluid"),
+            graphics.drawString(font, Component.translatable("jei.as_jei_fix.fluid"),
                     COLUMN_X, FLUID_LABEL_Y, LABEL, false);
         }
     }
@@ -348,7 +348,7 @@ public class AltarFixCategory implements IRecipeCategory<AltarRecipe> {
         if (mouseX < INFO_X || mouseX >= INFO_X + INFO_SIZE || mouseY < INFO_Y || mouseY >= INFO_Y + INFO_SIZE) {
             return;
         }
-        tooltip.add(Component.translatable("jei.astral_jei_fix.duration", recipe.getDuration() / 20));
+        tooltip.add(Component.translatable("jei.as_jei_fix.duration", recipe.getDuration() / 20));
         if (recipe.isOnlyNight()) {
             tooltip.add(Component.translatable("jei.astralsorcery.info.altar.recipe_night"));
         }

@@ -1,6 +1,6 @@
-package com.hydrogen.astraljeifix.client;
+package com.hydrogen.asjeifix.client;
 
-import com.hydrogen.astraljeifix.AstralJeiFix;
+import com.hydrogen.asjeifix.AsJeiFix;
 import hellfirepvp.astralsorcery.common.integration.jei.category.AltarRecipeCategory;
 import hellfirepvp.astralsorcery.common.lib.RecipeTypesAS;
 import hellfirepvp.astralsorcery.common.recipe.altar.AltarRecipe;
@@ -26,7 +26,7 @@ import java.util.List;
 @JeiPlugin
 public class AltarJeiPlugin implements IModPlugin {
     public static final RecipeType<AltarRecipe> ALTAR_TYPE =
-            new RecipeType<>(ResourceLocation.fromNamespaceAndPath(AstralJeiFix.MODID, "altar"), AltarRecipe.class);
+            new RecipeType<>(ResourceLocation.fromNamespaceAndPath(AsJeiFix.MODID, "altar"), AltarRecipe.class);
 
     private static final String[] CATALYSTS = {
             "altar_illumination", "altar_resonance", "altar_luminance", "altar_radiance"
@@ -34,7 +34,7 @@ public class AltarJeiPlugin implements IModPlugin {
 
     @Override
     public ResourceLocation getPluginUid() {
-        return ResourceLocation.fromNamespaceAndPath(AstralJeiFix.MODID, "jei");
+        return ResourceLocation.fromNamespaceAndPath(AsJeiFix.MODID, "jei");
     }
 
     @Override
