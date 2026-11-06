@@ -7,7 +7,7 @@
 | 项目 | 值 |
 |---|---|
 | 模组 ID | `as_jei_fix` |
-| 版本 | 1.0.1 |
+| 版本 | 1.0.2 |
 | 依赖 | Minecraft 1.21.1、NeoForge 21.1.x、Astral Sorcery 2.0.3+、JEI 19.x |
 | 环境 | 客户端（页面在客户端渲染） |
 | 许可证 | MIT |

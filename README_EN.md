@@ -7,7 +7,7 @@ The stock page is a fixed 148×220 background. With JEI's title bar the recipe n
 | Field | Value |
 |---|---|
 | Mod id | `as_jei_fix` |
-| Version | 1.0.1 |
+| Version | 1.0.2 |
 | Requires | Minecraft 1.21.1, NeoForge 21.1.x, Astral Sorcery 2.0.3+, JEI 19.x |
 | Side | Client |
 | License | MIT |
